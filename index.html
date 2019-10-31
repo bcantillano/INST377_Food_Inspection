@@ -15,7 +15,7 @@
 <body>
 
     <h1>Food Inspection Map</h1>
-    <p>This is a paragraph</p>
+    <p>Below is a map of Prince George's County</p>
 
     <div id="mapid" style="width: 600px; height: 400px;"></div>
     
@@ -31,6 +31,15 @@
 			    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		    id: 'mapbox.streets'
 	    }).addTo(mymap);
+
+        //L.marker([38.7849, -76.872],'Title').addTo(map);
+
+        var circle = L.circle([38.7849, -76.872], {
+	        color: 'blue',
+	        fillColor: '#0000FF',
+	        fillOpacity: 0.5,
+	        radius: 10000
+        }).addTo(mymap);
 
     </script>
 </body>
