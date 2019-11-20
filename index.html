@@ -5,14 +5,14 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Style sheet for webpage (Internal)-->
-    <link rel="stylesheet" href="Food_Inspection.css"> 
-
-    <!-- Style sheet for Leaflet Map (External) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
-	
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+ 
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+  </head>
 </head>
 <body>
     <div class="wrapper">
@@ -21,7 +21,7 @@
             <h1>Food Inspection Map</h1>
             <p>Below is a map of Prince George's County. Use the filter to refine your search.</p>
             
-            <div id="mapid" style="width: 600px; height: 400px;"></div>
+            <div id="mapid" style="width: 700px; height: 600px;"></div>
         </div>
 
         <div class="filter">
@@ -36,27 +36,12 @@
 
 
     <!-- Script for Leaflet Map -->
-    <script>
-        var mymap = L.map('mapid').setView([38.7849, -76.872], 10); // ([PG Coordinates], Zoom Level)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="javascript/leaflet.markercluster.js"></script>
+    <script src="javascript/leaflet.js"></script>
+    <script src="javascript/leaflet.markercluster.js"></script>
+    <script src="javascript/map.js" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-	    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		    maxZoom: 18,
-		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		    id: 'mapbox.streets'
-	    }).addTo(mymap);
-
-        //L.marker([38.7849, -76.872],'Title').addTo(map);
-
-        var circle = L.circle([38.7849, -76.872], {
-	        color: 'blue',
-	        fillColor: '#0000FF',
-	        fillOpacity: 0.5,
-	        radius: 10000
-        }).addTo(mymap);
-
-    </script>
-
+    
 </body>
 </html>
