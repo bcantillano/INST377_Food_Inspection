@@ -9,8 +9,7 @@ Restaurant food inspection heat mapping and tracking software built on JS/Leafle
 ## Target Browsers
 Our target browsers are desktop-based web browsers; users with access to a KB/M. Users on iOS/Android may struggle with pinch-to-zoom feature with heatmapping and ability to select individual restaurants on click. Fully functional using Chrome, Firefox, Safari, and Edge. Opera/IE may encounter some issues.
 
-## User Manual
-[User Manual](docs/user.md)
+## [User Manual](docs/user.md)
 
 # Developer Manual
 - How to install application and all dependencies
