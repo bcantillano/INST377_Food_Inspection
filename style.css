@@ -1,7 +1,6 @@
 /* Style sheet for Food Inspection Final Project */
 
 body {
-  color:#000000;
   background-color : #ffffff;
   font-family : arial, verdana, sans-serif;
 }
@@ -11,7 +10,7 @@ h1 {
 }
 
 p {
-  font-size:12px;
+  font-size:14px;
 }
 
 table {
