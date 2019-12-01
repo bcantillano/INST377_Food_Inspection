@@ -55,10 +55,6 @@ td.code {
   font-family:courier, courier-new, serif;
   font-weight:bold;
 }
-
-#mapid { 
-  height: 180px; 
-}
   
 .wrapper {
   min-height: 100%;
