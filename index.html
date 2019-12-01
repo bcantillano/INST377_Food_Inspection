@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Food Inspection</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Inspection Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="style.css" />
- 
+
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
     <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
-    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
-  </head>
+    <script type='text/javascript'
+        src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
 </head>
+</head>
+
 <body>
+    <div id="header">
+        <header>
+            <h1>Prince George's County Food Inspection Map</h1>
+        </header>
+            <h3><b>Project Links</b></h3>
+    </div>
+
+    <div id="links">
+        <a href="README.md">README |</a>
+        <a href="user.md">User Manual |</a>
+        <a href="docs/final.md">Final Report</a>
+    </div>
+    <hr>
     <div class="wrapper">
-    
         <div class="OutputContainer">
-            <h1>Food Inspection Map</h1>
-            <a href="README.md">README</a>
             <p>Below is a map of Prince George's County. Use the filter to refine your search.</p>
-            
             <div id="mapid" style="width: 700px; height: 600px;"></div>
         </div>
 
@@ -35,7 +49,6 @@
         </div>
     </div>
 
-
     <!-- Script for Leaflet Map -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="javascript/leaflet.markercluster.js"></script>
@@ -43,6 +56,6 @@
     <script src="javascript/leaflet.markercluster.js"></script>
     <script src="javascript/map.js" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-    
 </body>
+
 </html>

@@ -1,9 +1,20 @@
 /* Style sheet for Food Inspection Final Project */
+html {
+  background-color: whitesmoke;
+}
+
+header {
+  background-color: #808080;
+  text-align: center;
+}
+
+#links {
+  text-align: center;
+}
 
 body {
   background-color : #ffffff;
-  font-family : Segoe UI, Tahoma, Helvetica, sans-serif	
-
+  font-family : "Trebuchet MS", Segoe UI, Tahoma, Helvetica, sans-serif	
 }
 
 a {
@@ -11,9 +22,14 @@ a {
 }
 
 h1 {
-  font-size:25px;
+  font-size:26px;
 }
 
+h3 {
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  margin-bottom: 0.3em;
+}
 p {
   font-size:14px;
 }
@@ -47,19 +63,18 @@ td.code {
 .wrapper {
   min-height: 100%;
   display: flex;
-  width: 80%;
+  /* width: 70%; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   background: #BFBFBF;
-  border: 1px;
-  margin: 25px;
-      
+  /* border: 1px; */
+  /* margin: 25px; */
 }
       
 .wrapper div {
-  border-radius: 14px;
+  border-radius: 15px;
 }
 
 .filter{
