@@ -12,8 +12,8 @@ Our target browsers are desktop-based web browsers; users with access to a KB/M.
 ## [User Manual](docs/user.md)
 
 # Developer Manual
-- How to install application and all dependencies
-- How to run our application on a server
-- How to run any tests we have written for our software
-- The API for our server application - all GET, POST, PATCH, etc endpoints - and what each do
-- Known bugs/road-map for future development
+- How to install application and all dependencies?
+- How to run our application on a server?
+- How to run any tests we have written for our software?
+- The API for our server application - all GET, POST, PATCH, etc endpoints - and what each do?
+- Known bugs/road-map for future development?
