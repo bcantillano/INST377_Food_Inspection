@@ -7,6 +7,7 @@ header {
   display: flex;
   background-color: rgba(253, 165, 41, 0.80);
   justify-content: center;
+  margin-bottom: -0.5em;
 }
 
 #links {
@@ -40,6 +41,11 @@ h3 {
   font-family: "Trebuchet MS", sans-serif;
   margin-bottom: 0.3em;
 }
+
+h4 {
+  text-align: center;
+}
+
 p {
   font-size:14px;
 }
