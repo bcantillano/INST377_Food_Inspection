@@ -37,4 +37,4 @@ Our application is a very beneficial tool to all Prince George's County resident
 Some of the challenges we faced included determining which map application to use, gathering and storing data from PG County, and appending markers onto the Leaflet application.
 
 ## Future Plans
-To continue to improve our application, we would plan to add a search function and more filters for users to find restaurants. We would also include...
+To continue to improve our application, we would plan to add a search function and more filters for users to find restaurants. We would also include A google map JavaScript API which would improve accessibility for Mobile users. Adding more data from the PG County Database and other disctricts to our map would be helpful as it could be a tool for users outside the PG area. There is always room for improvement therefore we are open to different styles for the look of our website.
