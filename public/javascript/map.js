@@ -1,4 +1,3 @@
-console.log("start")
 const express = require('express');
 const fetch = require('node-fetch');
 
@@ -72,6 +71,8 @@ map.setView([38.7849, -76.872],10);
         })
     
 });
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
 /*for (var i=0;i<30;i++)

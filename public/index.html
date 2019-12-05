@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Inspection</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/leaflet.fusesearch.css" crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../dist/MarkerCluster.Default.ie.css" /><![endif]-->
+   
+  </head>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header>
+                <h1>Prince George's County Food Inspection Map</h1>
+            </header>
+                <h3><b>Project Links</b></h3>
+        </div>
+    
+        <div id="links">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="https://github.com/bcantillano/INST377_Food_Inspection/tree/master/docs">Documentation</a>
+        </div>
+        
+        <div class="wrapper">
+            <div class="OutputContainer">
+                <h3>Below is a map of Prince George's County. Use the filter to refine your search.</h3>
+                
+            </div>
+            <div id="mapid" style="width: 700px; height: 600px;"></div>
+            <div class="filter">
+                <h3>Filter</h3>
+                <!-- <input type="text" placeholder="Search.."> -->
+                <input type="checkbox" name="filter1" value="Filter_1"> Filter Description<br>
+                <input type="checkbox" name="filter2" value="Filter_2"> Filter Description<br>
+                <input type="checkbox" name="filter3" value="Filter_3" checked> Filter Description<br><br>
+                <input type="submit" value="Submit">
+                <button class="button" onclick="loadData()"> Load </button>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" crossorigin=""/>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/leaflet.featuregroup.subgroup/dist/leaflet.featuregroup.subgroup-src.js"></script>
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.css" crossorigin=""/>
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css" crossorigin=""/>
+    <script src="node_modules/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <!-- <script src="javascript/map.js"></script> -->
+
+    <script>
+        function pushToArray(arr, obj) {
+            const index = arr.findIndex((e) => e.properties.establishment_id === obj.properties.establishment_id);
+            if (index === -1) {
+                arr.push(obj);
+            } else {
+                if(arr[index].inspection_date>obj.inspection_date){
+                arr[index] = obj;
+            }
+        }
+            return arr;
+        }
+
+        function loadData() {
+            var baseUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            var baseAttribution = 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+            var center = new L.LatLng(38.7849, -76.872);
+            var maxZoom = 20;
+            var opacity = 1.0;
+            var subdomains = 'abc';
+            var basemap = new L.TileLayer(baseUrl, {maxZoom: maxZoom, attribution: baseAttribution, subdomains: subdomains, opacity: opacity });
+            var map = new L.Map('mapid', {
+                center: center,
+                zoom: 10,
+                maxZoom: maxZoom,
+                layers: [basemap],
+            });
+            map.setView([38.7849, -76.872],10);
+            var markers = new L.MarkerClusterGroup();
+            var points;
+            console.log('fetch');
+            fetch('/api')
+                .then((res) => res.json())
+                .then(data => {
+                    console.log("fetching")
+                    console.log(data)
+                    var clean=[]
+                    for(var i=0;i<data.features.length;i++){
+                        var temp= data.features[i];
+                        clean= pushToArray(clean,temp,data);
+                    }
+                    console.log(clean.length)
+                    points = L.geoJSON(clean);
+                    markers.addLayer(points);
+                    map.addLayer(markers);
+        })
+        }
+    </script>
+</body>
+</html>
