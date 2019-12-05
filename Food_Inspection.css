@@ -5,6 +5,9 @@ body {
   background-color : #ffffff;
   font-family : arial, verdana, sans-serif;
 }
+.map-label {
+  z-index: 9000638;
+}
 
 h1 {
   font-size:25px;

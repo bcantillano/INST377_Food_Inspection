@@ -5,13 +5,9 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
- 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
-    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
-    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+    <link rel="stylesheet" href="css/leaflet.fusesearch.css" crossorigin="" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../dist/MarkerCluster.Default.ie.css" /><![endif]-->
+   
   </head>
 </head>
 <body>
@@ -33,15 +29,13 @@
             <input type="submit" value="Submit">
         </div>
     </div>
-
-
-    <!-- Script for Leaflet Map -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="javascript/leaflet.markercluster.js"></script>
-    <script src="javascript/leaflet.js"></script>
-    <script src="javascript/leaflet.markercluster.js"></script>
-    <script src="javascript/map.js" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
-    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" crossorigin=""/>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/leaflet.featuregroup.subgroup/dist/leaflet.featuregroup.subgroup-src.js"></script>
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.css" crossorigin=""/>
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css" crossorigin=""/>
+    <script src="node_modules/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="javascript/map.js"></script>
 </body>
 </html>
