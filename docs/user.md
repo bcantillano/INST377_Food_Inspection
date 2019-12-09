@@ -1,6 +1,6 @@
 # INST377 Food Inspection
 Ayodeji Adeleke, Byron Cantillano, Luke Gibson, Jonathan Land, Ken Lin, Emmanual Mekonnen
-> Link to web application/instance
+> https://pgcounty-health.herokuapp.com/
 
 # User Manual
 
