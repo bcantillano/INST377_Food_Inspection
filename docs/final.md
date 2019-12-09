@@ -1,6 +1,6 @@
 # INST377 Food Inspection
 Ayodeji Adeleke, Byron Cantillano, Luke Gibson, Jonathan Land, Ken Lin, Emmanual Mekonnen
-> Link to web application/instance
+> https://pgcounty-health.herokuapp.com/
 
 ## Information Problem
 There is currently no way for people to see what restaurants, food establishments, and areas are compliant and not compliant with Prince George's County Food Inspections. Our application will highlight areas of potential risk and show non-compliant food establishments in an intuitive way to users.
