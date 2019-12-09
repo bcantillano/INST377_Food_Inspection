@@ -10,8 +10,8 @@ This application could be useful to many users, incuding Prince George’s Count
 
 To navigate through the map and find compliant and non-compliant restaurants, the user must use their mouse. To move around the map, click and drag; to zoom in, either use your scroll wheel or the "+" and "-" buttons located on the map. 
 
+Users will be able to view "hot-spots," or clusters of areas with restaurants that have failed food inspections. Users will then be able to click on and select invididual restaurants to view their compliance status. When users click a restaurant, they will be able to see the name, latitude, and longitude coordinates of the establishment.
+
 ![Map Menu](/images/user/menu.png)
 ![Map](/images/user/map.png)
 ![Map Filters](/images/user/filters.png)
-
-Users will be able to view "hot-spots," or clusters of areas with restaurants that have failed food inspections. Users will then be able to click on and select invididual restaurants to view their compliance status. When users click a restaurant, they will be able to see the name, latitude, and longitude coordinates of the establishment.
