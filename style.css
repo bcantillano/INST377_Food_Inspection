@@ -8,6 +8,7 @@ header {
   background-color: rgba(253, 165, 41, 0.8);
   justify-content: center;
   margin-bottom: -0.5em;
+  text-shadow: 1px 1.5px 1px #ccc;
 }
 
 #links {
@@ -90,6 +91,7 @@ td.code {
   background: orange;
   /* border: 1px; */
   /* margin: 25px; */
+  box-shadow: 0.5em 0.5em rgb(250,105,0);
 }
 
 .wrapper div {
