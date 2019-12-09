@@ -92,6 +92,7 @@ td.code {
   /* border: 1px; */
   /* margin: 25px; */
   box-shadow: 0.5em 0.5em rgb(250,105,0);
+  margin-bottom: 2em;
 }
 
 .wrapper div {
