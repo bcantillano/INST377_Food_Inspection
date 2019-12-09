@@ -26,11 +26,23 @@ body {
   margin: 0 0.2em;
   margin-bottom: 1em;
   padding: 3px;
-  background: #97caf2;
-  border: 2px solid rgba(0, 0, 0, 0.15);
+  background-color: #97caf2;
+  /* border: 2px solid rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
+  box-shadow: 0 5px #999;
+  border: none;
   font-weight: bold;
   color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+#links a:hover {background-color: #6ea3cc}
+
+#links a:active {
+  background-color: #6ea3cc;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
 }
 
 h1 {
