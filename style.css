@@ -14,8 +14,8 @@ header {
 }
 
 body {
-  background-color: #ffffff;
   font-family: "Trebuchet MS", Segoe UI, Tahoma, Helvetica, sans-serif;
+  background: whitesmoke;
 }
 
 #links a {
@@ -103,10 +103,6 @@ td.code {
   /* margin: 25px; */
   box-shadow: 0.5em 0.5em rgb(250,105,0);
   margin-bottom: 2em;
-}
-
-.wrapper div {
-  border-radius: 8px;
 }
 
 .filter {
