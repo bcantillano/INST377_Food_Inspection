@@ -30,9 +30,13 @@
         <div class="wrapper">
             <div class="OutputContainer">
                 <h3>Below is a map of Prince George's County. Use the filter to refine your search.</h3>
+
                 <div id="mapid" style="width: 700px; height: 600px;"></div>
+
             </div>
-            
+            <div>
+                <button onclick = resetURL()>Reset Resource</button>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -120,6 +124,15 @@
         }
             return arr;
         }
+
+        function resetURL() {
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: {
+                    }
+                })
+            }
 
         var data = $.ajax({
             url: "/api",
