@@ -27,5 +27,5 @@ A server that uses node packet manager can run the application off the build fol
   
 - Known bugs/road-map for future development?
 
-  If a user changes the resource URL with a POST request, any user who uses the application will have to reset the resource URL
+If a user changes the resource URL with a POST request, any user who uses the application will have to reset the resource URL
   
