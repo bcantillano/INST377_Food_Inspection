@@ -13,9 +13,11 @@ Our target browsers are desktop-based web browsers; users with access to a KB/M.
 
 # Developer Manual
 - How to install application and all dependencies?
+
 The application requires node packet manager to install and use. Once installed, navigate to the build folder in the command line, run npm install, then npm start. The application will open on local host, port 3000.
 
 - How to run our application on a server?
+
 A server that uses node packet manager can run the application off the build folder with the npm start command.
 
 - API end-points
@@ -24,5 +26,6 @@ A server that uses node packet manager can run the application off the build fol
   3. PUT on '/' resets the resource URL to the prince george's county food inspection API
   
 - Known bugs/road-map for future development?
+
   If a user changes the resource URL with a POST request, any user who uses the application will have to reset the resource URL
   
