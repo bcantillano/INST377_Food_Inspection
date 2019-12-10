@@ -4,8 +4,6 @@ html {
 }
 
 header {
-  /* display: flex; */
-  background-color: rgba(253, 165, 41, 0.8);
   justify-content: center;
   margin-bottom: -0.5em;
   text-shadow: 1px 1.5px 1px #ccc;
@@ -16,8 +14,8 @@ header {
 }
 
 body {
-  background-color: #ffffff;
   font-family: "Trebuchet MS", Segoe UI, Tahoma, Helvetica, sans-serif;
+  background: whitesmoke;
 }
 
 #links a {
@@ -27,7 +25,7 @@ body {
   margin-bottom: 1em;
   padding: 3px;
   background-color: #97caf2;
-  /* border: 2px solid rgba(0, 0, 0, 0.15); */
+  border: 2px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   box-shadow: 0 5px #999;
   border: none;
@@ -105,10 +103,6 @@ td.code {
   /* margin: 25px; */
   box-shadow: 0.5em 0.5em rgb(250,105,0);
   margin-bottom: 2em;
-}
-
-.wrapper div {
-  border-radius: 8px;
 }
 
 .filter {
