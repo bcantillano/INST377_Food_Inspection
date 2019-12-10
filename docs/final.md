@@ -28,13 +28,13 @@ Our solution is a map-based web app of Prince George’s County. Users are able 
 The goal of our project is to show users the sanitary conditions of restaurants in Prince George's County in a simple way. 
 
 ## Technical System
-For our project, we decided to use Leaflet, JS/JQuery/NodeJS (?), HTML and CSS. We chose Leaftlet for it's ease of use and ability to place overlays and map markers. 
+For our project, we decided to use Leaflet, JS/JQuery/NodeJS, HTML and CSS. We chose Leaftlet for it's ease of use and ability to place overlays and map markers. 
 
 ## Results
 Our application is a very beneficial tool to all Prince George's County residents to determine what restaurants are "safe" to dine at. This information could also be used for residents who live outside of PG County. The map is easy to navigate and users are able to select individual restaurants to determine its compliance status.
 
 ## Challenges
-Some of the challenges we faced included determining which map application to use, gathering and storing data from PG County, and appending markers onto the Leaflet application.
+Some of the challenges we faced included determining which map application to use, gathering and storing data from PG County, and appending markers onto the Leaflet application. Implementing additional endpoints on the back end proved troublesome in finding useful functionality.
 
 ## Future Plans
-To continue to improve our application, we would plan to add a search function and more filters for users to find restaurants. We would also include A google map JavaScript API which would improve accessibility for Mobile users. Adding more data from the PG County Database and other disctricts to our map would be helpful as it could be a tool for users outside the PG area. There is always room for improvement therefore we are open to different styles for the look of our website.
+To continue to improve our application, we would plan to add a search function and more filters for users to find restaurants. We would also include A google map JavaScript API which would improve accessibility for Mobile users. Adding more data from the PG County Database and other disctricts to our map would be helpful as it could be a tool for users outside the PG area. Providing users with examples or instructions for datasets to use with the endpoints to implement would help the applications versatility. There is always room for improvement therefore we are open to different styles for the look of our website.
