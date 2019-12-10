@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Inspection Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+    <script type='text/javascript'
+        src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+</head>
+
+<body>
+    <div id="header">
+        <header>
+            <h1>Prince George's County Food Inspection Map</h1>
+        </header>
+        <h3><b>Project Links</b></h3>
+    </div>
+
+    <div id="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="help.html">Help</a>
+        <a href="https://github.com/bcantillano/INST377_Food_Inspection/tree/master/docs">Documentation</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="OutputContainer">
+            <h1>Help</h1>
+
+            <h2>Documentation</h2>
+
+            <p>For help with using the web application, follow the documentation link above in order to read about the project and find instructions for use.</p>
+            <h2>New Data Source</h2>
+
+            <p>This page allows users to change the data source for food inspection data, if they find APIs that are different from
+                the Prince George's County inspections, or to reset it to the intended one in case it has been changed.
+            </p>
+
+            <button onclick = resetURL()>Reset Resource</button>
+
+            <form onsubmit= changeURL()>
+                URL:<br>
+                <input type="text" id="newURLform"><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <div class = "logos">
+
+                <a href="https://data.princegeorgescountymd.gov/Health/Food-Inspection/umjn-t2iz/data">
+                    <img src="https://data.princegeorgescountymd.gov/api/assets/68A289A4-F198-4DF4-91E1-A651C157C7AC" alt="Prince George's County Data"></img>
+                </a>
+
+                <a href="https://leafletjs.com/">
+                    <img src="https://leafletjs.com/docs/images/logo.png" alt="LeafletJS"></img>
+                </a>
+
+                <a href="https://nodejs.org/en/">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Node.js"></img>
+                </a>
+            </div>
+                <h4>Developers: Ayodeji Adeleke, Byron Cantillano, Luke Gibson, Jonathan Land, Ken Lin, Emmanuel Mekonnen</h4>
+        </div>
+
+        <script>
+            function changeURL() {
+                var newURL = document.getElementById("newURLform").innerHTML;
+                console.log(newURL);
+                $.ajax({
+                    url: '/',
+                    type: 'PUT',
+                    data: {
+                        "url": newURL
+                    }
+                })
+                ;
+            }
+
+            function resetURL() {
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: {
+                    }
+                })
+            }
+        </script>
+</body>
+
+</html>
